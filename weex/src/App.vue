@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import calendar from './pages/calendar/index.vue'
+import calendar from './pages/calendar/add.vue'
 
 export default {
   data () {

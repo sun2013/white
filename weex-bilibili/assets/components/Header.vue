@@ -1,13 +1,13 @@
 <template>
     <div class="wrapper">
         <div class="scan">
-            <text class="ic iconfont">&#xe689;</text>
-            <text class="txt">扫一扫</text>
+            <text class="ic iconfont"></text>
+            <text class="txt"></text>
         </div>
-        <text class="search iconfont"  @click="jumpWeb()">&#xe65c; 搜索商品，共8888款好物</text>
+        <text class="search iconfont">Buibuibui</text>
         <div class="notice">
-            <text class="ic iconfont">&#xe70a;</text>
-            <text class="txt">消息</text>
+            <text class="ic iconfont">&#xe65c;</text>
+            <text class="txt">搜索</text>
         </div>
     </div>
 </template>
@@ -36,7 +36,7 @@
     }
     .ic,.txt,.search{
         text-align: center;
-        color:#666;
+        color:#757575;
         font-weight: 300;
     }
     .ic{
@@ -47,11 +47,10 @@
      }
     .search {
         flex: 1;
-        height: 60px;
-        font-size: 26px;
+        height: 80px;
+        font-size: 40px;
         padding-top: 13px;
-        background-color: #ededed;
-        border-radius: 8px;
+        color:#fb7299;
     }
 </style>
 <script>

@@ -6,7 +6,13 @@
             <text ref="lTxt2" class="l-txt l-txt-2">的</text>
             <text ref="lTxt3" class="l-txt l-txt-3">生</text>
             <text ref="lTxt4" class="l-txt l-txt-4">活</text>
-            <text ref="lTxt5" class="l-txt l-txt-5">没</text>
+            <text ref="lTxt5" class="l-txt l-txt-5">没</text>efresh" @refresh="onrefresh" @pullingdown="onpullingdown" :display="refreshing ? 'show' : 'hide'">
+        <image class="loading-bg" resize="contain" src="http://doc.zwwill.com/yanxuan/imgs/yxbox-bg.png?v5"></image>
+        <div class="l-txt-box">
+            <text ref="lTxt1" class="l-txt l-txt-1">好</text>
+            <text ref="lTxt2" class="l-txt l-txt-2">的</text>
+            <text ref="lTxt3" class="l-txt l-txt-3">生</text>
+            <text ref="lTxt4" class="l-txt l-txt-4">活</text>
             <text ref="lTxt6" class="l-txt l-txt-6">那</text>
             <text ref="lTxt7" class="l-txt l-txt-7">么</text>
             <text ref="lTxt8" class="l-txt l-txt-8">贵</text>

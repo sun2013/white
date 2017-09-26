@@ -96,7 +96,7 @@ __vue_styles__.push(__webpack_require__(2)
 __vue_exports__ = __webpack_require__(3)
 
 /* template */
-var __vue_template__ = __webpack_require__(8)
+var __vue_template__ = __webpack_require__(11)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -108,10 +108,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "F:\\vue-weex-niurui-mobile\\weexApp\\src\\App.vue"
+__vue_options__.__file = "F:\\Sun\\white\\weex\\src\\App.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-be5f700e"
+__vue_options__._scopeId = "data-v-29db55bb"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -142,9 +142,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(9);
+var _add = __webpack_require__(4);
 
-var _index2 = _interopRequireDefault(_index);
+var _add2 = _interopRequireDefault(_add);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -154,7 +154,7 @@ exports.default = {
   },
 
   components: {
-    calendar: _index2.default
+    calendar: _add2.default
   }
 }; //
 //
@@ -164,36 +164,21 @@ exports.default = {
 //
 
 /***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["app"]
-  }, [_c('calendar')], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 9 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(10)
+__vue_styles__.push(__webpack_require__(5)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(11)
+__vue_exports__ = __webpack_require__(6)
 
 /* template */
-var __vue_template__ = __webpack_require__(19)
+var __vue_template__ = __webpack_require__(10)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -205,10 +190,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "F:\\vue-weex-niurui-mobile\\weexApp\\src\\pages\\calendar\\index.vue"
+__vue_options__.__file = "F:\\Sun\\white\\weex\\src\\pages\\calendar\\add.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-ee15faf8"
+__vue_options__._scopeId = "data-v-55d18751"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -223,174 +208,99 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = {}
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _calendar = __webpack_require__(12);
-
-var _calendar2 = _interopRequireDefault(_calendar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  data: function data() {
-    return {};
-  },
-
-  components: {
-    calendar: _calendar2.default
-  }
-}; //
-//
-//
-//
-//
-//
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(13)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(14)
-
-/* template */
-var __vue_template__ = __webpack_require__(18)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "F:\\vue-weex-niurui-mobile\\weexApp\\src\\pages\\calendar\\calendar.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-9b7c5f08"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 13 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = {
+  "iconfont": {
+    "fontFamily": "iconfont"
+  },
+  "font-34": {
+    "fontSize": 34,
+    "height": 84,
+    "lineHeight": 84
+  },
+  "font-25": {
+    "fontSize": 25
+  },
+  "mb20": {
+    "marginBottom": 20
+  },
   "header": {
-    "height": 88,
-    "paddingRight": 15,
-    "paddingLeft": 15,
-    "backgroundColor": "#f7f7f7",
-    "justifyContent": "space-between",
+    "height": 84,
+    "paddingRight": 32,
+    "paddingLeft": 32,
+    "backgroundImage": "linear-gradient(to right, #1ac9f6, #0a83eb)",
+    "justifyContent": "flex-start",
     "flexDirection": "row",
     "alignItems": "center",
-    "position": "relative",
-    "boxShadow": "0 2px 5px rgba(0, 0, 0, 0.5)"
-  },
-  "title-nav": {
-    "fontSize": 40
+    "position": "fixed",
+    "left": 0,
+    "top": 0
   },
   "back": {
-    "fontSize": 40
+    "position": "absolute",
+    "left": 32,
+    "top": 0,
+    "color": "#ffffff",
+    "height": 84,
+    "lineHeight": 84
   },
-  "add": {
-    "fontSize": 40
+  "title-nav": {
+    "color": "#ffffff",
+    "width": 686,
+    "height": 84,
+    "fontSize": 34,
+    "lineHeight": 84,
+    "overflow": "hidden",
+    "textAlign": "center"
   },
   "wrapper": {
-    "backgroundColor": "#efeff4"
+    "marginTop": 84,
+    "backgroundColor": "#f3f3f3"
   },
-  "font": {
-    "height": 60,
-    "lineHeight": 60,
-    "fontSize": 40,
-    "width": 107.14,
-    "textAlign": "center",
-    "alignItems": "center",
-    "whiteSpace": "nowrap"
-  },
-  "weeksWrapper": {
-    "height": 60,
-    "position": "relative",
-    "flexDirection": "row",
-    "flexWrap": "wrap",
-    "borderBottomStyle": "solid",
-    "borderBottomWidth": 2,
-    "borderBottomColor": "#FF0000",
+  "subject": {
+    "paddingRight": 32,
+    "paddingLeft": 32,
     "backgroundColor": "#ffffff"
   },
-  "weeksText": {
-    "flex": 1,
-    "height": 60,
-    "lineHeight": 60,
-    "fontSize": 40,
-    "textAlign": "center",
-    "whiteSpace": "normal"
+  "sub-title": {
+    "marginTop": 40,
+    "marginBottom": 27,
+    "height": 25,
+    "lineHeight": 25
   },
-  "slider": {
-    "width": 750,
-    "height": 360,
-    "backgroundColor": "#ffffff",
-    "marginBottom": 30
+  "infromation": {
+    "paddingRight": 32,
+    "paddingLeft": 32,
+    "backgroundColor": "#ffffff"
   },
-  "frame": {
-    "width": 750,
-    "position": "relative",
+  "datePicker": {
+    "justifyContent": "space-between",
     "flexDirection": "row",
-    "flexWrap": "wrap"
+    "backgroundColor": "rgb(243,243,243)"
   },
-  "currentDay": {
-    "color": "#FF0000"
+  "getTime": {
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "alignItems": "center"
   },
-  "currentMonth": {
-    "color": "#999999"
+  "act-cover": {
+    "width": 96,
+    "height": 96,
+    "borderRadius": 50
   },
-  "isSelect": {
-    "color": "#FF0000"
+  "time1": {
+    "backgroundColor": "#ffffff"
   },
-  "otherMonth": {
-    "color": "#eeddee"
+  "time2": {
+    "backgroundColor": "#ffffff"
   },
-  "eventWrapper": {
-    "height": 750
-  },
-  "eventItem": {
+  "item": {
     "display": "flex",
-    "height": 70,
-    "paddingLeft": 15,
-    "paddingRight": 15,
+    "height": 80,
+    "paddingLeft": 32,
+    "paddingRight": 32,
     "marginBottom": 20,
     "flexDirection": "row",
     "flexWrap": "no-wrap",
@@ -398,13 +308,56 @@ module.exports = {
     "backgroundColor": "#ffffff",
     "alignItems": "center"
   },
-  "eventTitle": {
-    "fontSize": 40
+  "border": {
+    "marginBottom": 0,
+    "borderBottomStyle": "solid",
+    "borderBottomWidth": 1,
+    "borderBottomColor": "#e5e5e5"
+  },
+  "icon-right": {
+    "marginLeft": 28
+  },
+  "actors": {
+    "paddingRight": 32,
+    "paddingLeft": 32,
+    "backgroundColor": "#ffffff"
+  },
+  "actList": {
+    "flexDirection": "row",
+    "flexWrap": "wrap",
+    "justifyContent": "flex-start"
+  },
+  "act-cell": {
+    "marginRight": 20
+  },
+  "actor": {
+    "width": 96,
+    "height": 63,
+    "textAlign": "center",
+    "lineHeight": 63,
+    "whiteSpace": "nowrap",
+    "textOverflow": "ellipsis",
+    "fontSize": 23
+  },
+  "submit": {
+    "paddingRight": 32,
+    "paddingLeft": 32,
+    "backgroundColor": "#ffffff"
+  },
+  "btn": {
+    "color": "#ffffff",
+    "height": 80,
+    "lineHeight": 80,
+    "marginTop": 40,
+    "marginBottom": 110,
+    "textAlign": "center",
+    "backgroundColor": "#09a1ff",
+    "borderRadius": 20
   }
 }
 
 /***/ }),
-/* 14 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -414,7 +367,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = __webpack_require__(15);
+var _stringify = __webpack_require__(7);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
@@ -451,247 +404,205 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var stream = weex.requireModule('stream');
+var picker = weex.requireModule('picker');
 var navigator = weex.requireModule('navigator');
 var modal = weex.requireModule('modal');
-// import api from './api.js';
+var storage = weex.requireModule('storage');
 exports.default = {
   data: function data() {
     return {
-      arr: [0, 1, -1], //三个月的日历数据
-      initIndex: 0, //滑动默认索引
-      direction: '', //滑动方向
-      //标题日期
-      titleStr: '',
-      weeks: ['日', '一', '二', '三', '四', '五', '六'],
-      dateObj: {},
-      daysArr: [],
-      daysFinalArr: [],
-      currentDate: new Date(),
-      isActive: true,
-      dayEvent: {}, //当前天的事件
-      ind: ''
+      url: '',
+      title: '新增日程',
+      form: {
+        subject: '',
+        content: '',
+        beginDate: '年/月/日',
+        beginTime: '00:00:00',
+        endDate: '年/月/日',
+        endTime: '00:00:00'
+      },
+      isRelate: false,
+      remind: {
+        label: '无'
+      },
+      isRepeat: {
+        label: '无'
+      }
     };
   },
-  created: function created() {
-    var _this = this;
-
-    // 登陆
-    this.post('http://120.25.240.32:9000/api/LoginAuthorize/Login', {
-      "userName": "admin",
-      "password": "123456",
-      "rememberMe": true
-    }, function (res) {
-      console.log(res);
-      _this.get('http://120.25.240.32:9000/api/Schedule/' + _this.getDateStr(_this.currentDate), function (res) {
-        console.log(res);
-        modal.toast({
-          message: res.message,
-          duration: 0.3
-        });
-      });
-      modal.toast({
-        message: res.data.message,
-        duration: 0.3
-      });
+  mounted: function mounted() {
+    var storage = new BroadcastChannel('Avengers1');
+    var repeat = new BroadcastChannel('Avengers2');
+    var that = this;
+    var domModule = weex.requireModule('dom');
+    domModule.addRule('fontFace', {
+      'fontFamily': "iconfont",
+      'src': "url('//at.alicdn.com/t/font_428498_e5po2t3v3aii19k9.ttf')"
     });
-    //获取当前月天数
-    this.showCalendarData();
-    this.daysFinalArr.push(this.daysArr);
-    console.log(this.getDateStr(this.currentDate));
-    //获取下一月天数
-    this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1);
-    this.showCalendarData();
-    this.daysFinalArr.push(this.daysArr);
-    //获取上月天数
-    this.toPrevMonth();
-    this.daysFinalArr.push(this.daysArr);
-    //天数重置为当前显示月份
-    this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1);
-    this.showCalendarData();
+    storage.onmessage = function (event) {
+      that.remind = JSON.parse(event.data);
+    };
+    repeat.onmessage = function (event) {
+      that.isRepeat = JSON.parse(event.data);
+    };
   },
 
   methods: {
-    //判断当前滑动方向和位置
-    changeNum: function changeNum(e) {
-      if (e.index == 1 && this.initIndex == 0) {
-        this.direction = 'left';
-        this.initIndex = e.index;
-        this.toNextMonth();
-        this.daysFinalArr.pop(); //0 !1 2
-        this.daysFinalArr.push(this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() - 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      if (e.index == 2 && this.initIndex == 1) {
-        this.direction = 'left';
-        this.initIndex = e.index;
-        this.daysFinalArr.shift(); //3 1 !2
-        this.toNextMonth();
-        this.daysFinalArr.unshift(this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() - 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      if (e.index == 0 && this.initIndex == 2) {
-        this.direction = 'left';
-        this.initIndex = e.index;
-        //!3 4 2
-        this.toNextMonth();
-        this.daysFinalArr.splice(1, 1, this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() - 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      if (e.index == 2 && this.initIndex == 0) {
-        this.direction = 'right';
-        this.initIndex = e.index;
-        //3 1 !2
-        this.toPrevMonth();
-        this.daysFinalArr.splice(1, 1, this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      if (e.index == 1 && this.initIndex == 2) {
-        this.direction = 'right';
-        this.initIndex = e.index;
-        //0 !1 2
-        this.toPrevMonth();
-        this.daysFinalArr.shift();
-        this.daysFinalArr.unshift(this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      if (e.index == 0 && this.initIndex == 1) {
-        this.direction = 'right';
-        this.initIndex = e.index;
-        // !0 1 -1
-        this.toPrevMonth();
-        this.daysFinalArr.pop();
-        this.daysFinalArr.push(this.daysArr);
-        this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 1, 1);
-        this.showCalendarData();
-        return false;
-      }
-      console.log(this.daysFinalArr);
-    },
-
-    //根据默认时间显示挡前月天数
-    showCalendarData: function showCalendarData() {
-      this.daysArr = [];
-      var _year = this.currentDate.getFullYear();
-      var _month = this.currentDate.getMonth() + 1;
-      var _dateStr = this.getDateStr(this.currentDate);
-      this.titleStr = _dateStr.substr(0, 4) + "年" + _dateStr.substr(5, 2) + "月";
-      var _firstDay = new Date(_year, _month - 1, 1); //当前月第一天；
-      for (var i = 0; i < 42; i++) {
-        var dayObj = {};
-        var _thisDay = new Date(_year, _month - 1, i + 1 - _firstDay.getDay());
-        var _thisDayStr = this.getDateStr(_thisDay);
-        dayObj.date = _thisDayStr;
-        if (_thisDayStr == this.getDateStr(new Date())) {
-          // 当前天
-          dayObj.className = 'currentDay';
-        } else if (_thisDayStr.substr(0, 7) == this.getDateStr(_firstDay).substr(0, 7)) {
-          dayObj.className = 'currentMonth'; // 当前月
-        } else {
-          // 其他月
-          dayObj.className = 'otherMonth';
-        }
-        dayObj.num = _thisDay.getDate();
-        this.daysArr.push(dayObj);
-      }
-    },
-    getDateStr: function getDateStr(date) {
-      var _year = date.getFullYear();
-      var _month = date.getMonth() + 1; // 月从0开始计数
-      var _d = date.getDate();
-
-      _month = _month > 9 ? "" + _month : "0" + _month;
-      _d = _d > 9 ? "" + _d : "0" + _d;
-      return _year + "-" + _month + "-" + _d;
-    },
-
-    //上个月数据
-    toPrevMonth: function toPrevMonth() {
-      this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() - 2, 1);
-      this.showCalendarData();
-    },
-
-    //下个月数据 
-    toNextMonth: function toNextMonth() {
-      this.currentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth() + 2, 1);
-      this.showCalendarData();
-    },
-
-    // 选择日期
-    selectDays: function selectDays(e, index) {
-      this.ind = index;
-      console.log(e.date);
-    },
-
-    // 跳转到添加日程；
-    add: function add() {
-      var url = this.$getConfig().bundleUrl;
-      url = url.split('/').slice(0, -1).join('/') + '/add.js';
-      navigator.push({
-        url: url,
-        animated: "true"
-      }, function (event) {
-        modal.toast({ message: 'callback: ' + event });
-      });
-    },
-    goInfo: function goInfo() {
-      var url = this.$getConfig().bundleUrl;
-      url = url.split('/').slice(0, -1).join('/') + '/info.js';
-      navigator.push({
-        url: url,
-        animated: "true"
-      }, function (event) {
-        modal.toast({ message: 'callback: ' + event });
-      });
-    },
     back: function back() {
       navigator.pop();
     },
+    pickStartTime: function pickStartTime() {
+      var _this = this;
 
-    //获取数据
+      picker.pickDate({
+        max: '2029-11-28',
+        min: '2005-11-28'
+      }, function (event) {
+        if (event.result === 'success') {
+          _this.form.beginDate = event.data;
+          picker.pickTime({}, function (event) {
+            if (event.result === 'success') {
+              _this.form.beginTime = event.data;
+            }
+          });
+        }
+      });
+    },
+    pickEndTime: function pickEndTime() {
+      var _this2 = this;
+
+      picker.pickDate({
+        max: '2029-11-28',
+        min: '2005-11-28'
+      }, function (event) {
+        if (event.result === 'success') {
+          _this2.form.endDate = event.data;
+          picker.pickTime({}, function (event) {
+            if (event.result === 'success') {
+              _this2.form.endTime = event.data;
+            }
+          });
+        }
+      });
+    },
+    onchange: function onchange(e) {
+      this.isRelate = e.value;
+    },
     post: function post(url, params, callback) {
       return stream.fetch({
         method: 'POST',
-        type: 'json',
         body: (0, _stringify2.default)(params),
         headers: { 'Content-Type': 'application/json' },
         url: url
       }, callback);
     },
-    get: function get(url, callback) {
-      return stream.fetch({
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-        url: url
-      }, callback);
+    postMsg: function postMsg() {
+      var that = this;
+      this.post('http://120.25.240.32:9000/api/LoginAuthorize/Login', {
+        "userName": "admin",
+        "password": "123456",
+        "rememberMe": true
+      }, function (res) {
+        that.post('http://120.25.240.32:9000/api/Schedule/Add', that.form, function (res) {
+          console.log(res);
+          modal.toast({
+            message: res,
+            duration: 0.3
+          });
+        });
+      });
+    },
+    getTime: function getTime() {
+      var url = this.$getConfig().bundleUrl;
+      url = url.split('/').slice(0, -1).join('/') + '/getTime.js';
+      navigator.push({
+        url: url,
+        animated: "true"
+      }, function (event) {});
+    },
+    getRepeat: function getRepeat() {
+      var url = this.$getConfig().bundleUrl;
+      url = url.split('/').slice(0, -1).join('/') + '/isRepeat.js';
+      navigator.push({
+        url: url,
+        animated: "true"
+      }, function (event) {});
     }
-    // 截流
-
   }
 };
 
 /***/ }),
-/* 15 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(16), __esModule: true };
+module.exports = { "default": __webpack_require__(8), __esModule: true };
 
 /***/ }),
-/* 16 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(17);
+var core = __webpack_require__(9);
 var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
 module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
@@ -699,7 +610,7 @@ module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
 
 
 /***/ }),
-/* 17 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.1' };
@@ -707,87 +618,207 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 18 */
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: ["header"]
+  }, [_c('text', {
+    staticClass: ["title-nav"]
+  }, [_vm._v(_vm._s(_vm.title))]), _c('text', {
+    staticClass: ["back", "font-34", "iconfont"],
+    on: {
+      "click": _vm.back
+    }
+  }, [_vm._v("")])]), _c('scroller', {
+    staticClass: ["wrapper"]
+  }, [_c('div', {
+    staticClass: ["subject", "mb20"]
+  }, [_c('text', {
+    staticClass: ["font-25", "sub-title"]
+  }, [_vm._v("主题")]), _c('textarea', {
+    staticClass: ["font-25"],
+    attrs: {
+      "name": "",
+      "id": "",
+      "rows": "3",
+      "placeholder": "请输入日程主要内容主题",
+      "value": (_vm.form.subject)
+    },
+    on: {
+      "input": function($event) {
+        _vm.form.subject = $event.target.attr.value
+      }
+    }
+  })]), _c('div', {
+    staticClass: ["infromation", "mb20"]
+  }, [_c('text', {
+    staticClass: ["font-25", "sub-title"]
+  }, [_vm._v("详情")]), _c('textarea', {
+    staticClass: ["font-25"],
+    attrs: {
+      "name": "",
+      "id": "",
+      "cols": "30",
+      "rows": "6",
+      "placeholder": "请输入日程详情",
+      "value": (_vm.form.content)
+    },
+    on: {
+      "input": function($event) {
+        _vm.form.content = $event.target.attr.value
+      }
+    }
+  })]), _c('div', {
+    staticClass: ["item", "border"],
+    on: {
+      "click": _vm.pickStartTime
+    }
+  }, [_c('text', {
+    staticClass: ["time1", "font-25"]
+  }, [_vm._v("开始时间")]), _c('div', {
+    staticClass: ["getTime"]
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v(_vm._s(_vm.form.beginDate) + " " + _vm._s(_vm.form.beginTime))]), _c('text', {
+    staticClass: ["icon-right", "font-25", "iconfont"]
+  }, [_vm._v("")])])]), _c('div', {
+    staticClass: ["item"],
+    on: {
+      "click": _vm.pickEndTime
+    }
+  }, [_c('text', {
+    staticClass: ["time1", "font-25"]
+  }, [_vm._v("结束时间")]), _c('div', {
+    staticClass: ["getTime"]
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v(_vm._s(_vm.form.endDate) + " " + _vm._s(_vm.form.endTime))]), _c('text', {
+    staticClass: ["icon-right", "font-25", "iconfont"]
+  }, [_vm._v("")])])]), _c('div', {
+    staticClass: ["item", "border"],
+    on: {
+      "click": _vm.getTime
+    }
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v("提醒")]), _c('div', {
+    staticClass: ["getTime"]
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v(_vm._s(_vm.remind.label))]), _c('text', {
+    staticClass: ["icon-right", "font-25", "iconfont"]
+  }, [_vm._v("")])])]), _c('div', {
+    staticClass: ["item"],
+    on: {
+      "click": _vm.getRepeat
+    }
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v("重复")]), _c('div', {
+    staticClass: ["getTime"]
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v(_vm._s(_vm.isRepeat.label))]), _c('text', {
+    staticClass: ["icon-right", "font-25", "iconfont"]
+  }, [_vm._v("")])])]), _vm._m(0), _c('div', {
+    staticClass: ["item"]
+  }, [_c('text', {
+    staticClass: ["font-25"]
+  }, [_vm._v("设置为任务")]), _c('switch', {
+    on: {
+      "change": _vm.onchange
+    }
+  })]), (_vm.isRelate) ? _c('div', {
+    staticClass: ["actors", "mb20"]
+  }, [_c('text', {
+    staticClass: ["font-25", "sub-title"]
+  }, [_vm._v("监督者")]), _vm._m(1)]) : _vm._e(), _c('div', {
+    staticClass: ["submit"]
+  }, [_c('text', {
+    staticClass: ["btn", "font-25"],
+    on: {
+      "click": _vm.postMsg
+    }
+  }, [_vm._v("提 交")])])])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["actors", "mb20"]
+  }, [_c('text', {
+    staticClass: ["font-25", "sub-title"]
+  }, [_vm._v("参与者")]), _c('div', {
+    staticClass: ["actList"]
+  }, [_c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i1.hdslb.com/bfs/face/306c7a83680a2787a462310ca9d80841d1930267.gif"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])]), _c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i2.hdslb.com/bfs/face/4b6eb872d4c29352bcea4b110bd04aef022ddf58.jpg"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])]), _c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i1.hdslb.com/bfs/face/306c7a83680a2787a462310ca9d80841d1930267.gif"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["actList"]
+  }, [_c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i1.hdslb.com/bfs/face/306c7a83680a2787a462310ca9d80841d1930267.gif"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])]), _c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i2.hdslb.com/bfs/face/4b6eb872d4c29352bcea4b110bd04aef022ddf58.jpg"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])]), _c('div', {
+    staticClass: ["act-cell"]
+  }, [_c('image', {
+    staticClass: ["act-cover"],
+    attrs: {
+      "src": "https://i1.hdslb.com/bfs/face/306c7a83680a2787a462310ca9d80841d1930267.gif"
+    }
+  }), _c('text', {
+    staticClass: ["actor", "font-25"]
+  }, [_vm._v("我我我我我我")])])])
+}]}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["body"]
-  }, [_c('div', {
-    staticClass: ["header"]
-  }, [_c('text', {
-    staticClass: ["back"],
-    on: {
-      "click": _vm.back
-    }
-  }, [_vm._v("返回")]), _c('text', {
-    staticClass: ["title-nav"]
-  }, [_vm._v(_vm._s(_vm.titleStr))]), _c('text', {
-    staticClass: ["add"],
-    on: {
-      "click": _vm.add
-    }
-  }, [_vm._v("＋")])]), _c('div', {
-    staticClass: ["wrapper"]
-  }, [_c('div', {
-    staticClass: ["weeksWrapper"]
-  }, _vm._l((_vm.weeks), function(n) {
-    return _c('text', {
-      staticClass: ["weeksText"]
-    }, [_vm._v(_vm._s(n))])
-  })), _c('slider', {
-    staticClass: ["slider"],
-    attrs: {
-      "interval": "3000"
-    },
-    on: {
-      "change": _vm.changeNum
-    }
-  }, _vm._l((_vm.daysFinalArr), function(items) {
-    return _c('div', {
-      staticClass: ["frame"]
-    }, _vm._l((items), function(item, $index) {
-      return _c('text', {
-        staticClass: ["font"],
-        class: [item.className, {
-          'isSelect': _vm.ind === $index
-        }],
-        attrs: {
-          "dataDate": item.date
-        },
-        on: {
-          "click": function($event) {
-            _vm.selectDays(item, $index)
-          }
-        }
-      }, [_vm._v(_vm._s(item.num))])
-    }))
-  })), _c('scroller', {
-    staticClass: ["eventWrapper"],
-    attrs: {
-      "showScrollbar": "false"
-    }
-  }, _vm._l((10), function(item) {
-    return _c('div', {
-      staticClass: ["eventItem"],
-      on: {
-        "click": _vm.goInfo
-      }
-    }, [_c('text', {
-      staticClass: ["eventTitle"]
-    }, [_vm._v("111111111111111")]), _c('text', {
-      staticClass: ["icon-right", "eventTitle"]
-    }, [_vm._v(">")])])
-  }))])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('calendar')], 1)
+    staticClass: ["app"]
+  }, [_c('calendar')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

@@ -1,31 +1,28 @@
 <template>
   <div class="body">
     <!-- 导航 -->
-    <div class="header">
+    <div class="header" title="日程" background-color="#3683FF" title-color="#FF0000" left-item-title="<" left-item-color="#EA80FF" right-item-title="+" right-item-color="#EA80FF">
       <text class="back" @click="back">返回</text>
       <text class="title-nav">{{titleStr}}</text>
       <text class="add" @click="add">＋</text>
     </div>
-    <!-- 内容 -->
-    <div class="wrapper">
-      <!-- 星期？ -->
-      <div class="weeksWrapper">
-        <text class="weeksText" v-for="n in weeks">{{n}}</text>
-      </div>
-      <!-- 日历 -->
-      <slider class="slider" interval="3000" @change="changeNum">
-        <div class="frame" v-for="items in daysFinalArr">
-          <text v-for="(item,$index) in items" class="font" :class="[item.className,item.date ==days ?'currentDay':'']" :data-date="item.date" @click="selectDays(item,$index)">{{item.num}}</text>
-        </div>
-      </slider>
-      <!-- 事件 -->
-      <scroller class="eventWrapper" show-scrollbar="false">
-        <div class="eventItem" v-for="item in events" @click="goInfo">
-          <text class="eventTitle">{{item.title}}</text>
-          <text class="icon-right eventTitle">></text>
-        </div>
-      </scroller>
+    <!-- 星期 -->
+    <div class="weeksWrapper">
+      <text class="weeksText" v-for="n in weeks">{{n}}</text>
     </div>
+    <!-- 日历 -->
+    <slider class="slider" interval="3000" @change="changeNum">
+      <div class="frame" v-for="items in daysFinalArr">
+        <text v-for="(item,$index) in items" class="font" :class="[item.className,item.date ==days ?'currentDay':'']" :data-date="item.date" @click="selectDays(item,$index)">{{item.num}}</text>
+      </div>
+    </slider>
+    <!-- 事件 -->
+    <scroller class="eventWrapper" show-scrollbar="false">
+      <div class="eventItem" v-for="item in events" @click="goInfo">
+        <text class="eventTitle">{{item.title}}</text>
+        <text class="icon-right eventTitle">></text>
+      </div>
+    </scroller>
   </div>
 </template>
 
@@ -68,6 +65,7 @@ export default {
     }, res => {
       this.get(`http://120.25.240.32:9000/api/Schedule/${this.getDateStr(this.currentDate)}`, res => {
         this.eventsArray = res.data.data;
+        console.log(this.eventsArray)
         this.eventsArray.forEach((v, i) => {
           const startTm = new Date(this.getDateStr(new Date(v.start))).getTime()
           const endTm = new Date(this.getDateStr(new Date(v.end))).getTime()
@@ -206,7 +204,7 @@ export default {
     },
     // 选择日期
     selectDays(e, index) {
-      if(new Date(this.currentDate).getMonth() + 1 !== new Date(e.date).getMonth() + 1) return;
+      if (new Date(this.currentDate).getMonth() + 1 !== new Date(e.date).getMonth() + 1) return;
       this.days = e.date;
       this.events = [];
       this.eventsArray.forEach((v, i) => {
@@ -280,16 +278,17 @@ export default {
 }
 </script>
 <style scoped>
+.body{
+  background-color: #efeff4;
+}
 .header {
-  height: 88px;
-  padding-right: 15px;
   padding-left: 15px;
-  background-color: #f7f7f7;
+  padding-right: 15px;
+  height: 88px;
+  font-size: 40px;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .title-nav {
@@ -302,10 +301,6 @@ export default {
 
 .add {
   font-size: 40px;
-}
-
-.wrapper {
-  background-color: #efeff4;
 }
 
 .font {
@@ -355,6 +350,9 @@ export default {
 .currentDay {
   color: red;
 }
+
+
+
 
 
 
