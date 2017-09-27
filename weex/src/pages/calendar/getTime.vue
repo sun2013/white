@@ -77,6 +77,7 @@ export default {
       navigator.pop()
     },
     setStorage(label, value) {
+      console.log(label,value)
       const storage = new BroadcastChannel('Avengers1')
       storage.postMessage(JSON.stringify({ label: label, value: value }))
       navigator.pop()

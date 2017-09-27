@@ -23,50 +23,25 @@ export default {
       title: '重复',
       options: [{
         value: 0,
-        label: '事件发生时'
+        label: '永不'
       }, {
         value: 5,
-        label: '5分钟前'
+        label: '每天'
       }, {
         value: 15,
-        label: '15分钟前'
+        label: '每周'
       }, {
         value: 30,
-        label: '30分钟前'
+        label: '每两周'
       }, {
         value: 60,
-        label: '1小时前'
+        label: '每月'
       }, {
         value: 120,
-        label: '2小时前'
+        label: '每年'
       }, {
         value: 1440,
-        label: '1天前'
-      }, {
-        value: 2880,
-        label: '2天前'
-      }],
-      optionsEnd: [{
-        value: 15,
-        label: '15分钟前'
-      }, {
-        value: 30,
-        label: '30分钟前'
-      }, {
-        value: 60,
-        label: '1小时前'
-      }, {
-        value: 120,
-        label: '2小时前'
-      }, {
-        value: 1440,
-        label: '1天前'
-      }, {
-        value: 2880,
-        label: '2天前'
-      }, {
-        value: 10080,
-        label: '一周前'
+        label: '自定'
       }],
     }
   },

@@ -108,10 +108,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "F:\\Sun\\white\\weex\\src\\App.vue"
+__vue_options__.__file = "F:\\vue-weex-niurui-mobile\\white\\weex\\src\\App.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-29db55bb"
+__vue_options__._scopeId = "data-v-a4c55f76"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -190,10 +190,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "F:\\Sun\\white\\weex\\src\\pages\\calendar\\add.vue"
+__vue_options__.__file = "F:\\vue-weex-niurui-mobile\\white\\weex\\src\\pages\\calendar\\add.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-55d18751"
+__vue_options__._scopeId = "data-v-798430f2"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -469,18 +469,33 @@ var picker = weex.requireModule('picker');
 var navigator = weex.requireModule('navigator');
 var modal = weex.requireModule('modal');
 var storage = weex.requireModule('storage');
+Date.prototype.Format = function (fmt) {
+  //author: meizz 
+  var o = {
+    "M+": this.getMonth() + 1, //月份 
+    "d+": this.getDate(), //日 
+    "h+": this.getHours(), //小时 
+    "m+": this.getMinutes(), //分 
+    "s+": this.getSeconds(), //秒 
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+    "S": this.getMilliseconds() //毫秒 
+  };
+  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var k in o) {
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+  }return fmt;
+};
 exports.default = {
   data: function data() {
     return {
       url: '',
       title: '新增日程',
       form: {
-        subject: '',
+        title: '',
         content: '',
-        beginDate: '年/月/日',
-        beginTime: '00:00:00',
-        endDate: '年/月/日',
-        endTime: '00:00:00'
+        beginDate: '',
+        endDate: '年/月/日 00:00:00',
+        remind: []
       },
       isRelate: false,
       remind: {
@@ -491,7 +506,9 @@ exports.default = {
       }
     };
   },
-  mounted: function mounted() {
+  created: function created() {
+    this.form.beginDate = new Date().Format("yyyy-MM-dd hh:mm");
+    this.form.endDate = new Date(new Date().setMinutes(new Date().getMinutes() + 1)).Format("yyyy-MM-dd hh:mm");
     var storage = new BroadcastChannel('Avengers1');
     var repeat = new BroadcastChannel('Avengers2');
     var that = this;
@@ -501,7 +518,9 @@ exports.default = {
       'src': "url('//at.alicdn.com/t/font_428498_e5po2t3v3aii19k9.ttf')"
     });
     storage.onmessage = function (event) {
+      that.form.remind = [];
       that.remind = JSON.parse(event.data);
+      that.form.remind.push(that.remind.value);
     };
     repeat.onmessage = function (event) {
       that.isRepeat = JSON.parse(event.data);
@@ -523,7 +542,7 @@ exports.default = {
           _this.form.beginDate = event.data;
           picker.pickTime({}, function (event) {
             if (event.result === 'success') {
-              _this.form.beginTime = event.data;
+              _this.form.beginDate += ' ' + event.data;
             }
           });
         }
@@ -540,7 +559,7 @@ exports.default = {
           _this2.form.endDate = event.data;
           picker.pickTime({}, function (event) {
             if (event.result === 'success') {
-              _this2.form.endTime = event.data;
+              _this2.form.endDate += ' ' + event.data;
             }
           });
         }
@@ -554,20 +573,23 @@ exports.default = {
         method: 'POST',
         body: (0, _stringify2.default)(params),
         headers: { 'Content-Type': 'application/json' },
-        url: url
+        url: url,
+        type: 'json'
       }, callback);
     },
     postMsg: function postMsg() {
       var that = this;
+      console.log(that.form);
+      modal.toast({ message: '正在提交...', duration: 1 });
       this.post('http://120.25.240.32:9000/api/LoginAuthorize/Login', {
         "userName": "admin",
         "password": "123456",
         "rememberMe": true
       }, function (res) {
         that.post('http://120.25.240.32:9000/api/Schedule/Add', that.form, function (res) {
-          console.log(res);
+          var data = res.data;
           modal.toast({
-            message: res,
+            message: res.message,
             duration: 0.3
           });
         });
@@ -644,11 +666,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "",
       "rows": "3",
       "placeholder": "请输入日程主要内容主题",
-      "value": (_vm.form.subject)
+      "value": (_vm.form.title)
     },
     on: {
       "input": function($event) {
-        _vm.form.subject = $event.target.attr.value
+        _vm.form.title = $event.target.attr.value
       }
     }
   })]), _c('div', {
@@ -681,7 +703,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["getTime"]
   }, [_c('text', {
     staticClass: ["font-25"]
-  }, [_vm._v(_vm._s(_vm.form.beginDate) + " " + _vm._s(_vm.form.beginTime))]), _c('text', {
+  }, [_vm._v(_vm._s(_vm.form.beginDate))]), _c('text', {
     staticClass: ["icon-right", "font-25", "iconfont"]
   }, [_vm._v("")])])]), _c('div', {
     staticClass: ["item"],
@@ -694,7 +716,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["getTime"]
   }, [_c('text', {
     staticClass: ["font-25"]
-  }, [_vm._v(_vm._s(_vm.form.endDate) + " " + _vm._s(_vm.form.endTime))]), _c('text', {
+  }, [_vm._v(_vm._s(_vm.form.endDate))]), _c('text', {
     staticClass: ["icon-right", "font-25", "iconfont"]
   }, [_vm._v("")])])]), _c('div', {
     staticClass: ["item", "border"],
